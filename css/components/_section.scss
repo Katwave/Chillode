@@ -107,8 +107,7 @@ section {
         height: 70px;
         background-color: transparent;
         z-index: 99;
-        padding: 8px;
-        border-bottom: 1px solid #555;
+        padding: 0px 8px 0px 8px;
         cursor: pointer;
         transition: all 300ms ease-in-out;
         // margin-top: 4px;
@@ -173,7 +172,8 @@ section {
           @include flexCenter(column);
           align-items: flex-start;
           margin: 6px;
-          // padding: 6px 0px 0px 6px;
+          border-bottom: 1px solid #555;
+          padding: 8px;
 
           .trackname {
             font-weight: bolder;

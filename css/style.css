@@ -394,8 +394,7 @@ body {
   height: 70px;
   background-color: transparent;
   z-index: 99;
-  padding: 8px;
-  border-bottom: 1px solid #555;
+  padding: 0px 8px 0px 8px;
   cursor: pointer;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -442,7 +441,7 @@ body {
 
 .container section .section-container .list .list-cards .cover {
   border-radius: 50px;
-  background-color: transparent;
+  background-color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,6 +498,8 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 6px;
+  border-bottom: 1px solid #555;
+  padding: 8px;
 }
 
 .container section .section-container .list .list-cards .content .trackname {
@@ -623,7 +624,7 @@ body {
 
 .container section .section-container .playing .playing-nav .cover {
   border-radius: 50px;
-  background-color: transparent;
+  background-color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
