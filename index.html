@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chillode | Music For Chilling</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./img/16-chillode.png" />
+    <meta name="theme-color" content="#222" />
+    <link rel="manifest" href="./chillode.json" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="circle"></div>
+    </div>
+    <div class="container">
+      <div class="about">
+        <div class="about-nav">
+          <div class="backHome">
+            <span><i class="fas fa-arrow-left"></i></span>
+          </div>
+        </div>
+        <div class="about-container">
+          <div class="info">
+            <h1>DEVELOPER</h1>
+            <br />
+            <p><strong>Name:</strong> Mangoale KR</p>
+            <p>
+              <strong>E-mail:</strong>
+              <a href="mailto:katlegodevelops@gmail.com"
+                >Katlegodevelops@gmail.com</a
+              >
+            </p>
+            <br />
+            <h1>HOW TO USE</h1>
+            <br />
+            <p>
+              <strong>Playing a beat/song</strong>
+              <br />
+              To play a beat/song click on any song from the list and the beat
+              will start playign.
+            </p>
+            <br />
+            <p>
+              <strong>Now playing</strong>
+              <br />
+              To go to the playing song, just click on the menu on the top right
+              above the all songs and a menu will pop up. In the menu click
+              "Playing" to open the playing song/beat.
+            </p>
+            <br />
+            <p>
+              <strong>Song/Beat playlist</strong>
+              <br />
+              To go back to the playlist from the 'now playing' song/beat, just
+              click the back arrow at the top left of the screen bellow the
+              "circle" cover art.
+            </p>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="section-container">
+          <div class="list">
+            <nav>
+              <div class="nav-container">
+                <div class="logo">
+                  <a href="#">Chillode</a>
+                </div>
+                <div class="ham-nav">
+                  <div class="openNav">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+
+            <div class="navLinks">
+              <ul>
+                <li class="nowPlaying"><i class="fas fa-pause"></i> Playing</li>
+                <li class="about-info"><i class="fas fa-info"></i> About</li>
+                <li class="about-info add-button">
+                  <i class="far fa-plus-square"></i> Install
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Playing song -->
+          <div class="playing">
+            <div class="playing-nav">
+              <div class="cover">
+                <img src="./img/1.jpg" alt="cover art" />
+              </div>
+              <div class="content">
+                <p class="trackname">Chill_on_the_moon_(Prod by Katwave)</p>
+                <p class="artist">Katwave</p>
+              </div>
+              <div class="ellipse-button">
+                <span></span> <span></span> <span></span>
+                <a href="#" download class="download">
+                  <i class="fas fa-cloud-download"></i> Download</a
+                >
+                <!-- <a href="#" class="back"> <i class="fas fa-arrow-left"></i> Back</a> -->
+              </div>
+            </div>
+            <div class="playing-cover">
+              <div class="back">
+                <span><i class="fas fa-arrow-left"></i></span>
+              </div>
+              <img src="./img/1.jpg" alt="cover art" />
+            </div>
+            <div class="playing-controls">
+              <input type="range" class="seek" min="0" max="100" step="1" />
+              <div class="button-controls">
+                <div class="repeat-container">
+                  <span class="repeat"> <i class="fas fa-repeat"></i> </span>
+                </div>
+                <div class="play-container">
+                  <span class="play"> <i class="fas fa-play"></i> </span>
+                </div>
+                <div class="volume-container">
+                  <span class="volumeIcon">
+                    <i class="fas fa-volume-up"></i>
+                  </span>
+                  <input
+                    type="range"
+                    class="volume"
+                    min="0"
+                    max="100"
+                    step="1"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/classes.js"></script>
+    <script type="text/javascript">
+      // Service worker
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          // Loader
+          document.getElementsByClassName("loader")[0].style = "display:none";
+
+          navigator.serviceWorker.register("./sw.js").then(
+            function (registration) {
+              // Registration was successful
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function (err) {
+              // registration failed :(
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+
+      let deferredPrompt;
+      const addBtn = document.querySelector(".add-button");
+      addBtn.style.display = "none";
+
+      window.addEventListener("beforeinstallprompt", (e) => {
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later.
+        deferredPrompt = e;
+        // Update UI to notify the user they can add to home screen
+        addBtn.style.display = "block";
+
+        addBtn.addEventListener("click", (e) => {
+          // hide our user interface that shows our A2HS button
+          addBtn.style.display = "none";
+          // Show the prompt
+          deferredPrompt.prompt();
+          // Wait for the user to respond to the prompt
+          deferredPrompt.userChoice.then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+              console.log("User accepted the A2HS prompt");
+            } else {
+              console.log("User dismissed the A2HS prompt");
+            }
+            deferredPrompt = null;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
