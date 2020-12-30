@@ -113,6 +113,7 @@ if (audio.play) {
   audio.pause;
 }
 play.addEventListener("click", async (e) => {
+  play.innerHTML = '<i class="fas fa-pause"></i>';
   await audio.play();
 
   audioSettings.playAudio();
