@@ -1,0 +1,585 @@
+section {
+  width: 100%;
+  height: fit-content;
+  // background: #222;
+  background-color: transparent;
+  @include flexCenter(row);
+  //   @include headerShadows();
+  height: 100%;
+
+  .section-container {
+    @include flexCenter(row);
+    width: 80%;
+    height: 90%;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 1500px) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      display: block;
+    }
+
+    .list {
+      position: relative;
+      @include flexCenter(column);
+      justify-content: flex-start;
+      width: 40%;
+      //   background-color: red;
+      height: 100%;
+      overflow: auto;
+
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+        background: transparent;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        width: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #999;
+        width: 100%;
+      }
+
+      @import "./nav";
+
+      .navLinks {
+        position: absolute;
+        top: 55px;
+        right: 4px;
+        background-color: #444;
+        display: block;
+        z-index: 199;
+        padding: 8px;
+        border-radius: 5px;
+        @include shadows();
+        display: none;
+
+        animation: enlarge 200ms linear 1;
+        @keyframes enlarge {
+          0% {
+            transform: scaleY(0);
+          }
+          100% {
+            transform: scaleY(1);
+          }
+        }
+
+        ul {
+          margin: 0;
+          list-style: none;
+          padding: 0;
+
+          li {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #555;
+            color: #aaa;
+            transition: all 300ms ease-in-out;
+            background: #444;
+            text-align: right;
+            font-size: 18px;
+            cursor: pointer;
+
+            i {
+              margin-right: 4px;
+            }
+
+            &:hover {
+              color: #ddd;
+              background-color: #555;
+            }
+          }
+        }
+      }
+
+      .list-cards {
+        @include flexCenter(row);
+        justify-content: flex-start;
+        width: 100%;
+        height: 70px;
+        background-color: transparent;
+        z-index: 99;
+        padding: 8px;
+        border-bottom: 1px solid #555;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        // margin-top: 4px;
+
+        @media screen and (max-height: 650px) {
+          width: 100%;
+          height: 60px;
+        }
+
+        @media screen and (max-width: 1000px) {
+          width: 60%;
+        }
+
+        @media screen and (max-width: 900px) {
+          width: 80%;
+        }
+
+        @media screen and (max-width: 650px) {
+          width: 95%;
+        }
+
+        @media screen and (max-width: 500px) {
+          width: 100%;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          background-color: #333;
+        }
+
+        .cover {
+          // width: 10%;
+          border-radius: 50px;
+          background-color: transparent;
+          @include flexCenter(row);
+          margin-left: 3px;
+
+          @media screen and (max-width: 1000px) {
+            margin-left: 0px;
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+
+            @media screen and (max-height: 650px) {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+
+        .content {
+          // flex: 1;
+          width: 80%;
+          background-color: transparent;
+          height: 100%;
+          @include flexCenter(column);
+          align-items: flex-start;
+          margin: 6px;
+          // padding: 6px 0px 0px 6px;
+
+          .trackname {
+            font-weight: bolder;
+            color: #fff;
+            display: block;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media screen and (max-height: 650px) {
+              font-size: 15px;
+            }
+          }
+          .artist {
+            color: $light;
+            margin-top: 4px;
+            display: block;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media screen and (max-height: 650px) {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .plays {
+          padding: 10px;
+          height: 100%;
+          @include flexCenter(row);
+
+          p {
+            color: $light;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .playing {
+      position: relative;
+      background-color: transparent;
+      flex: 1;
+      height: 100%;
+      @media screen and (max-width: 1000px) {
+        display: none;
+        width: 100%;
+      }
+      z-index: 1000;
+
+      .playing-nav {
+        @include flexCenter(row);
+        justify-content: flex-start;
+        width: 100%;
+        height: 10%;
+        background-color: transparent;
+        z-index: 100;
+        padding: 8px;
+        border-bottom: 1px solid #555;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+        @include shadows();
+
+        @media screen and (max-height: 650px) {
+          padding: 0px;
+        }
+
+        @media screen and (max-height: 500px) {
+          height: 12%;
+        }
+
+        @media screen and (max-height: 400px) {
+          height: 15%;
+        }
+
+        .cover {
+          // width: 10%;
+          border-radius: 50px;
+          background-color: transparent;
+          @include flexCenter(row);
+
+          @media screen and (max-width: 1000px) {
+            margin-left: 0px;
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            margin-left: 5px;
+
+            @media screen and (max-height: 650px) {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+
+        .content {
+          width: 90%;
+          background-color: transparent;
+          height: 100%;
+          margin-left: 6px;
+          display: flex;
+          @include flexCenter(column);
+          align-items: flex-start;
+          overflow: hidden;
+
+          .trackname {
+            font-weight: bolder;
+            color: #fff;
+            display: block;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media screen and (max-height: 650px) {
+              font-size: 15px;
+            }
+          }
+          .artist {
+            color: $light;
+            margin-top: 4px;
+            display: block;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @media screen and (max-height: 650px) {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .ellipse-button {
+          position: relative;
+          padding: 10px;
+          height: 100%;
+          background-color: transparent;
+          @include flexCenter(column);
+          cursor: pointer;
+
+          &:hover {
+            a {
+              display: flex;
+            }
+          }
+
+          span {
+            width: 4px;
+            height: 4px;
+            border-radius: 50px;
+            background-color: #aaa;
+            margin-top: 4px;
+          }
+
+          a {
+            position: absolute;
+            top: 46px;
+            right: 0;
+            padding: 10px;
+            background-color: #333;
+            color: #ddd;
+            text-decoration: none;
+            display: none;
+            flex-direction: row;
+            transition: all 300ms ease-in-out;
+            box-shadow: 1px 3px 6px rgba(0, 20, 13, 0.5);
+            animation: enlarge 200ms linear 1;
+            z-index: 1000;
+            @keyframes enlarge {
+              0% {
+                transform: scaleY(0);
+              }
+              100% {
+                transform: scaleY(1);
+              }
+            }
+
+            &:hover {
+              background-color: #444;
+            }
+            i {
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+
+      .playing-cover {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(188deg, $light, #aaa);
+        height: 80%;
+        @include flexCenter(row);
+        overflow: hidden;
+
+        @media screen and (max-height: 650px) {
+          height: 100% - 12% - 10%;
+        }
+
+        @media screen and (max-height: 500px) {
+          height: 100% - 12% - 14%;
+        }
+
+        @media screen and (max-height: 400px) {
+          height: 100% - 17% - 15%;
+        }
+
+        .back {
+          position: absolute;
+          top: 2px;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-color: #222;
+          @include flexCenter(row);
+          left: 4px;
+          cursor: pointer;
+          display: none;
+          @include shadows();
+          z-index: 1000;
+
+          @media screen and (max-width: 1000px) {
+            display: flex;
+          }
+
+          span {
+            color: #fff;
+          }
+        }
+
+        img {
+          width: 50%;
+          height: 80%;
+          border-radius: 50px;
+          box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+          animation: shake 5s alternate infinite;
+
+          @media screen and (max-width: 800px) {
+            width: 70%;
+          }
+
+          @media screen and (max-width: 550px) {
+            width: 80%;
+            height: 90%;
+          }
+
+          @media screen and (max-width: 450px) {
+            width: 90%;
+            height: 90%;
+          }
+
+          @keyframes shake {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            100% {
+              transform: rotate(10deg);
+            }
+          }
+        }
+      }
+
+      .playing-controls {
+        // position: sticky;
+        // bottom: 0;
+        background: #222;
+        padding: 0px 8px;
+        @include flexCenter(column);
+        justify-content: flex-start;
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+        height: 10%;
+
+        @media screen and (max-width: 550px) {
+          padding: 0px 1px;
+        }
+
+        @media screen and (max-height: 650px) {
+          height: 12%;
+        }
+
+        @media screen and (max-height: 500px) {
+          height: 14%;
+        }
+
+        @media screen and (max-height: 400px) {
+          height: 17%;
+        }
+
+        input[type="range"] {
+          position: sticky;
+          top: 0;
+          -webkit-appearance: none;
+          width: 100%;
+          height: 4px;
+          outline: none;
+          background: $light;
+          opacity: 0.8;
+          cursor: pointer;
+          box-shadow: inset -6px -6px 24px rgba(255, 255, 255, 0.3);
+          @media screen and (max-width: 550px) {
+            height: 3px;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 6px 6px 30px rgba(0, 209, 129, 0.3);
+            @media screen and (max-width: 550px) {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+
+        .button-controls {
+          margin-top: 10px;
+          width: 100%;
+          background-color: transparent;
+          @include flexCenter(row);
+          justify-content: flex-start;
+          height: 80%;
+          @media screen and (max-width: 550px) {
+            padding: 4px;
+          }
+
+          .repeat-container {
+            width: 30%;
+            height: fit-content;
+            border-radius: 50%;
+            background-color: transparent;
+            @include flexCenter(row);
+            justify-content: flex-start;
+
+            span {
+              padding: 12px;
+              border-radius: 50%;
+              background: transparent;
+              @include flexCenter(row);
+              box-shadow: 1px 3px 6px rgba(0, 20, 13, 0.5);
+              cursor: pointer;
+              color: #999;
+              @media screen and (max-height: 500px) {
+                padding: 10px;
+              }
+            }
+          }
+
+          .play-container {
+            width: 60%;
+            height: fit-content;
+            border-radius: 50%;
+            background-color: transparent;
+            @include flexCenter(row);
+
+            span {
+              padding: 12px;
+              border-radius: 50%;
+              background-color: $light;
+              @include flexCenter(row);
+              box-shadow: 1px 3px 12px rgba(0, 209, 129, 0.3);
+              cursor: pointer;
+              color: #fff;
+              @media screen and (max-height: 500px) {
+                padding: 10px;
+              }
+            }
+          }
+
+          .volume-container {
+            width: 30%;
+            height: fit-content;
+            border-radius: 50%;
+            background-color: transparent;
+            @include flexCenter(row);
+            justify-content: flex-end;
+
+            span {
+              padding: 10px;
+              border-radius: 50%;
+              // background-color: $light;
+              @include flexCenter(row);
+              // box-shadow: 1px 3px 12px rgba(0, 60, 255, 0.3);
+              cursor: pointer;
+              color: #999;
+              transition: all 300ms ease-in-out;
+
+              &:hover {
+                color: #ddd;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

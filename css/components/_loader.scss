@@ -1,0 +1,41 @@
+.loader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #222;
+  z-index: 10000;
+  @include flexCenter(column);
+  display: none;
+
+  .circle {
+    width: 80px;
+    height: 80px;
+    background: #5dff937a;
+    border: 8px solid #444;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    animation: animate-circle 1s linear infinite;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0;
+      background: $light;
+      width: 50%;
+      height: 50%;
+
+      @keyframes animate-circle {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}

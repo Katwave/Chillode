@@ -1,0 +1,36 @@
+{
+  "background_color": "#222",
+  "description": "Music web application for studying, sleeping and coding",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "/img/512-chillode.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/192-chillode.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/128-chillode.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/img/48-chillode.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/img/16-chillode.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    }
+  ],
+  "name": "Chillode",
+  "short_name": "Chillode",
+  "start_url": "http://127.0.0.1:5500/html/index.html",
+  "theme_color": "#222"
+}
