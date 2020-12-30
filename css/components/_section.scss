@@ -145,7 +145,7 @@ section {
         .cover {
           // width: 10%;
           border-radius: 50px;
-          background-color: transparent;
+          background-color: #333;
           @include flexCenter(row);
           margin-left: 3px;
 
@@ -253,7 +253,7 @@ section {
         .cover {
           // width: 10%;
           border-radius: 50px;
-          background-color: transparent;
+          background-color: #333;
           @include flexCenter(row);
 
           @media screen and (max-width: 1000px) {
