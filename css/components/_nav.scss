@@ -3,7 +3,7 @@ nav {
   top: 0;
   width: 100%;
   height: fit-content;
-  padding: 6px;
+  padding: 6px 8px;
   background: #444;
   @include flexCenter(row);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
@@ -15,12 +15,12 @@ nav {
     background: transparent;
     // padding: 0px 8px;
     @include flexCenter(row);
-    @media screen and (max-width: 900px) {
-      width: 85%;
-    }
-    @media screen and (max-width: 600px) {
-      width: 95%;
-    }
+    // @media screen and (max-width: 900px) {
+    //   width: 85%;
+    // }
+    // @media screen and (max-width: 600px) {
+    //   width: 95%;
+    // }
 
     .logo {
       width: 70%;
@@ -31,16 +31,18 @@ nav {
         text-decoration: none;
         font-family: "Courier New", Courier, monospace;
         @include flexCenter(row);
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 700;
         color: #aaa;
+        @media screen and (max-width: 240px) {
+          font-size: 21px;
+        }
         span {
           margin-left: 4px;
-          color: #fff;
         }
         img {
-          width: 60px;
-          height: 50px;
+          width: 36px;
+          height: 36px;
           // @media screen and (max-width: 600px) {
           //   width: 60px;
           // }

@@ -135,7 +135,7 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 6px;
+  padding: 6px 8px;
   background: #444;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,18 +176,6 @@ body {
           flex-direction: row;
 }
 
-@media screen and (max-width: 900px) {
-  .container section .section-container .list nav .nav-container {
-    width: 85%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .container section .section-container .list nav .nav-container {
-    width: 95%;
-  }
-}
-
 .container section .section-container .list nav .nav-container .logo {
   width: 70%;
   background: transparent;
@@ -225,19 +213,24 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
   color: #aaa;
 }
 
+@media screen and (max-width: 240px) {
+  .container section .section-container .list nav .nav-container .logo a {
+    font-size: 21px;
+  }
+}
+
 .container section .section-container .list nav .nav-container .logo a span {
   margin-left: 4px;
-  color: #fff;
 }
 
 .container section .section-container .list nav .nav-container .logo a img {
-  width: 60px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
 }
 
 .container section .section-container .list nav .nav-container .ham-nav {
