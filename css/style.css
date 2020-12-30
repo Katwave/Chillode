@@ -472,13 +472,13 @@ body {
 
 @media screen and (max-height: 650px) {
   .container section .section-container .list .list-cards .cover img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 }
 
 .container section .section-container .list .list-cards .content {
-  width: 86%;
+  width: 83%;
   background-color: transparent;
   height: 100%;
   display: -webkit-box;
@@ -526,12 +526,7 @@ body {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-@media screen and (max-height: 650px) {
-  .container section .section-container .list .list-cards .content .artist {
-    font-size: 14px;
-  }
+  font-size: 14px;
 }
 
 .container section .section-container .list .list-cards .plays {
@@ -638,6 +633,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-left: 3px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -650,13 +646,12 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  margin-left: 5px;
 }
 
 @media screen and (max-height: 650px) {
   .container section .section-container .playing .playing-nav .cover img {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 }
 

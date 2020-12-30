@@ -158,15 +158,15 @@ section {
             border-radius: 50px;
 
             @media screen and (max-height: 650px) {
-              width: 40px;
-              height: 40px;
+              width: 45px;
+              height: 45px;
             }
           }
         }
 
         .content {
           // flex: 1;
-          width: 86%;
+          width: 83%;
           background-color: transparent;
           height: 100%;
           @include flexCenter(column);
@@ -195,9 +195,7 @@ section {
             width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
-            @media screen and (max-height: 650px) {
-              font-size: 14px;
-            }
+            font-size: 14px;
           }
         }
 
@@ -255,6 +253,7 @@ section {
           border-radius: 50px;
           background-color: #333;
           @include flexCenter(row);
+          margin-left: 3px;
 
           @media screen and (max-width: 1000px) {
             margin-left: 0px;
@@ -264,11 +263,10 @@ section {
             width: 50px;
             height: 50px;
             border-radius: 50px;
-            margin-left: 5px;
 
             @media screen and (max-height: 650px) {
-              width: 40px;
-              height: 40px;
+              width: 45px;
+              height: 45px;
             }
           }
         }
