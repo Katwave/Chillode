@@ -611,6 +611,18 @@ body {
   }
 }
 
+@media screen and (max-height: 350px) {
+  .container section .section-container .playing .playing-nav {
+    height: 18%;
+  }
+}
+
+@media screen and (max-height: 290px) {
+  .container section .section-container .playing .playing-nav {
+    height: 21%;
+  }
+}
+
 .container section .section-container .playing .playing-nav .cover {
   border-radius: 50px;
   background-color: #333;
@@ -815,6 +827,18 @@ body {
   }
 }
 
+@media screen and (max-height: 350px) {
+  .container section .section-container .playing .playing-cover {
+    height: 60%;
+  }
+}
+
+@media screen and (max-height: 290px) {
+  .container section .section-container .playing .playing-cover {
+    height: 55%;
+  }
+}
+
 .container section .section-container .playing .playing-cover .back {
   position: absolute;
   top: 2px;
@@ -952,6 +976,18 @@ body {
 @media screen and (max-height: 400px) {
   .container section .section-container .playing .playing-controls {
     height: 17%;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .container section .section-container .playing .playing-controls {
+    height: 22%;
+  }
+}
+
+@media screen and (max-height: 290px) {
+  .container section .section-container .playing .playing-controls {
+    height: 24%;
   }
 }
 

@@ -249,6 +249,14 @@ section {
           height: 15%;
         }
 
+        @media screen and (max-height: 350px) {
+          height: 18%;
+        }
+
+        @media screen and (max-height: 290px) {
+          height: 21%;
+        }
+
         .cover {
           // width: 10%;
           border-radius: 50px;
@@ -383,6 +391,14 @@ section {
           height: 100% - 17% - 15%;
         }
 
+        @media screen and (max-height: 350px) {
+          height: 100% - 18% - 22%;
+        }
+
+        @media screen and (max-height: 290px) {
+          height: 100% - 21% - 24%;
+        }
+
         .back {
           position: absolute;
           top: 2px;
@@ -463,6 +479,14 @@ section {
 
         @media screen and (max-height: 400px) {
           height: 17%;
+        }
+
+        @media screen and (max-height: 350px) {
+          height: 22%;
+        }
+
+        @media screen and (max-height: 290px) {
+          height: 24%;
         }
 
         input[type="range"] {
