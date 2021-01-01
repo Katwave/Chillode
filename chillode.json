@@ -31,6 +31,6 @@
   ],
   "name": "Chillode",
   "short_name": "Chillode",
-  "start_url": "chillode.site",
+  "start_url": "/",
   "theme_color": "#222"
 }
