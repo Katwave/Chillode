@@ -238,6 +238,7 @@ section {
 
         @media screen and (max-height: 650px) {
           padding: 0px;
+          padding: 0px 4px;
         }
 
         @media screen and (max-height: 500px) {
@@ -255,9 +256,9 @@ section {
           @include flexCenter(row);
           margin-left: 3px;
 
-          @media screen and (max-width: 1000px) {
-            margin-left: 0px;
-          }
+          // @media screen and (max-width: 1000px) {
+          //   margin-left: 0px;
+          // }
 
           img {
             width: 50px;

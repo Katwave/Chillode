@@ -595,6 +595,7 @@ body {
 @media screen and (max-height: 650px) {
   .container section .section-container .playing .playing-nav {
     padding: 0px;
+    padding: 0px 4px;
   }
 }
 
@@ -627,12 +628,6 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-left: 3px;
-}
-
-@media screen and (max-width: 1000px) {
-  .container section .section-container .playing .playing-nav .cover {
-    margin-left: 0px;
-  }
 }
 
 .container section .section-container .playing .playing-nav .cover img {
