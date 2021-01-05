@@ -51,9 +51,10 @@ section {
       @import "./nav";
 
       .navLinks {
-        position: fixed;
-        top: 55px;
-        right: 4px;
+        position: sticky;
+        top: 53px;
+        // right: 4px
+
         background-color: #444;
         display: block;
         z-index: 199;
@@ -61,14 +62,17 @@ section {
         border-radius: 5px;
         @include shadows();
         display: none;
+        width: 96%;
 
-        animation: enlarge 200ms linear 1;
+        animation: enlarge 300ms linear 1;
         @keyframes enlarge {
           0% {
-            transform: scaleY(0);
+            opacity: 0;
+            transform: scale(0);
           }
           100% {
-            transform: scaleY(1);
+            opacity: 1;
+            transform: scale(1);
           }
         }
 
@@ -81,7 +85,7 @@ section {
             display: block;
             padding: 10px;
             border-bottom: 1px solid #555;
-            color: #aaa;
+            color: #ddd;
             transition: all 300ms ease-in-out;
             background: #444;
             text-align: right;
@@ -93,7 +97,6 @@ section {
             }
 
             &:hover {
-              color: #ddd;
               background-color: #555;
             }
           }
