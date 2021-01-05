@@ -51,7 +51,7 @@ section {
       @import "./nav";
 
       .navLinks {
-        position: absolute;
+        position: fixed;
         top: 55px;
         right: 4px;
         background-color: #444;
