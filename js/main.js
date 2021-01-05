@@ -84,6 +84,27 @@ const beats = [
     artist: "Katwave",
     plays: 0,
   },
+  {
+    aud: "../aud/one35_Midnight_(Prod by Katwave).mp3",
+    cover: "../img/1.jpg",
+    title: "01:35_Midnight_(Prod by Katwave)",
+    artist: "Katwave",
+    plays: 0,
+  },
+  {
+    aud: "../aud/ten55_night_(Prod by Katwave).mp3",
+    cover: "../img/1.jpg",
+    title: "22:55_night_(Prod by Katwave)",
+    artist: "Katwave",
+    plays: 0,
+  },
+  {
+    aud: "../aud/twnty3-57_night(Prod by Katwave).mp3",
+    cover: "../img/1.jpg",
+    title: "23:57_night_(Prod by Katwave)",
+    artist: "Katwave",
+    plays: 0,
+  },
 ];
 
 // Setting up audio
